@@ -1,5 +1,5 @@
 Standalone eigensolver for symmetric matrices using power iteration with spectral deflation.
-Written in C with OpenMP acceleration.
+Written in C with OpenMP acceleration. Sergey Voronin, 2017.
 
 Usage: make test matrix (see e.g. Octave script write_test_matrix.m)  
 

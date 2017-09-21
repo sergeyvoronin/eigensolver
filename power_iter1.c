@@ -93,8 +93,11 @@ void power_iter(mat *A, double tol, int maxiters, double *eval, vec *evec){
 		
 		vector_copy(err, Xn);
 
-		/* err = Xn - X */
+		/* break early if ||err = Xn - X|| < tol */
 		vector_add(err, X, -1, err); 
+		if(vector_get2norm(err) < tol){
+			break;
+		}
 	
 		vector_copy(X,Xn);
 	}
